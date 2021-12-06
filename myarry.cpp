@@ -25,7 +25,9 @@ class myArray{ // 102135
       a[k] = ma[k];
   }
   myArray(const myArray& b){
-    arr <- n;
+   this-> n = b.n;
+   for(int i=0; i<this->n; i++)
+     this->a[i] = b.a[i];
     cout << "copy construcotr" 
          << endl;
   }
