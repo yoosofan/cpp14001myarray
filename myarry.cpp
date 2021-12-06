@@ -63,14 +63,14 @@ class myArray{ // 102135
       input >> A.n;
       if(A.n < 0 || A.n > A.MAX)
         cout << "n must be 0 < n < " << A.MAX << endl;
-      while(A.n < 0 || A.n > A.MAX);
-    // if(A.n < 0 || A.n > A.MAX)    throw "index out of range";
+    } while(A.n < 0 || A.n > A.MAX);
+     // if(A.n < 0 || A.n > A.MAX)    throw "index out of range";
     for(int i=0; i<A.n; i++){
       cout << "Enter element: " << i << ": ";
       input >> A[i];
     }
     return input;
-  }
+   }
 };
 void f1(void);
 int main(){
