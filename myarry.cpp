@@ -110,13 +110,9 @@ void f1(void){
   myArray d(x, sizeof(x)/sizeof(x[0]));
   myArray p(d);
   myArray q=p;
-  myArray a[]={1,2,3,4,};
-  myArray b[]={1,1,5,2};
-  myArray z[]= a[] * b[];
-  myArray A[];
-  cin >> A[];
-  cout << A[];
-  p.print();
+  q = p * d;
+  cout << q ;
+
 }
 /*
 copy construcotr
