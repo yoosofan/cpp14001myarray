@@ -41,9 +41,9 @@ class myArray{ // 102135
            << a[i] << endl;
   }
   myArray operator=(myArray& arr){
-    n=n.arr;
+    n = arr.n;
     for(int i=0 ; i<arr.n ; i++)
-    a[i]=arr.a[i];
+      a[i] = arr.a[i];
     cout << "operator=" << endl;
     return *this;
   }
