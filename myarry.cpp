@@ -86,19 +86,24 @@ myArray operator*(const myArray& a,
     result.a[i] = a.a[i] * b.a[i];
   if(a.n > b.n){
     for(; i<a.n; i++)
-      
-  result.z=a[]*b[];
+      result.a[i] = a.a[i];
+  else
+    for(; i<b.n; i++)
+      result.a[i] = b.a[i];
   return result;
 }
-myArray operator>(const myArray a[],const myArray b[]){
-  for(int i=0 ; i<arr.n ; i++)
-  if(*a[i]>*b[i])
-  cout << "a is greater than b" << endl;
-  else
-  if(a[]>b[])
-  cout << "a is greater than b" << endl;
-  else
-  cout << "b is greater than a" << endl;
+bool operator>(const myArray& a,
+    const myArray& b){
+  int min = a.n > b.n ? b.n : a.n;
+  int i;
+  for(i=0 ; i<min; i++)
+    if(a.a[i] > b.a[i])
+      return true;
+    else if(a.a[i] < b.a[i])
+      return false;
+  if(a.n > b.n)
+    return true;
+  return false;
 }
 void f1(void){
   double x[]{10, 12, 34, 54};
