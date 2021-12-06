@@ -69,7 +69,7 @@ class myArray{ // 102135
      // if(A.n < 0 || A.n > A.MAX)    throw "index out of range";
     for(int i=0; i<A.n; i++){
       cout << "Enter element: " << i << ": ";
-      input >> A[i];
+      input >> A.a[i];
     }
     return input;
    }
