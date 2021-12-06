@@ -49,7 +49,8 @@ class myArray{ // 102135
       const myArray& l);
   friend bool operator>(const myArray& a,
       const myArray& b);
-  friend ostream& operator<<(ostream &output, const complexCls &A){
+  friend ostream& operator<<(ostream &output, 
+      const myArry& A){
     output << "n= " << n << endl;
     for(int i=0; i<A.n; i++)
       output << A.a[i] << endl;
