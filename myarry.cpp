@@ -53,7 +53,7 @@ class myArray{ // 102135
       const myArray& b);
   friend ostream& operator<<(ostream &output, 
       const myArray& A){
-    output << "n= " << n << endl;
+    output << "n= " << A.n << endl;
     for(int i=0; i<A.n; i++)
       output << A.a[i] << endl;
     return output;
