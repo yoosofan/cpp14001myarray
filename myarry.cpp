@@ -45,15 +45,18 @@ class myArray{ // 102135
     cout << "operator=" << endl;
     return *this;
   }
-  friend myArray operator*(const myArray a[],const myArray b[]);
-  friend bool operator>(const myArray a[],const myArray b[]);
+  friend myArray operator*(const myArray& a,
+      const myArray& l);
+  friend bool operator>(const myArray& a,
+      const myArray& b);
   friend ostream& operator<<(ostream &output, const complexCls &A){
     output << "n= " << n << endl;
     for(int i=0; i<A.n; i++)
       output << A.a[i] << endl;
     return output;
   }
-   friend istream& operator>>(istream &input, complexCls &A){
+  friend istream& operator>>(istream &input, 
+      complexCls& A){
     do{
       cout << "Enter n: ";
       input >> A.n;
@@ -73,8 +76,17 @@ int main(){
   f1();
   return 0;
 }
-myArray operator*(const myArray a[],const myArray b[]){
+myArray operator*(const myArray& a,
+    const myArray& b){
   myArray result;
+  result.n = a.n > b.n ? a.n : b.n;
+  min = a.n > b.n ? b.n : a.n;
+  int i;
+  for(i=0; i < min; i++)
+    result.a[i] = a.a[i] * b.a[i];
+  if(a.n > b.n){
+    for(; i<a.n; i++)
+      
   result.z=a[]*b[];
   return result;
 }
