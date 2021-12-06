@@ -40,7 +40,7 @@ class myArray{ // 102135
       cout << "a[" << i << "] = " 
            << a[i] << endl;
   }
-  myArray operator=(myArray& arr){
+  myArray operator=(const myArray& arr){
     n = arr.n;
     for(int i=0 ; i<arr.n ; i++)
       a[i] = arr.a[i];
